@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#030c15">
+<meta name="description" content="Pelayaran kecil untuk Muhammad Andika Pratama di usia ke-21.">
+<title>The Ocean Voyage · Selamat Ulang Tahun, Andika</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="prog"></div>
+
+<div id="intro">
+  <div class="bar top"></div><div class="bar bot"></div>
+  <div class="intro-in">
+    <p class="eyebrow i" data-d="0.3">Di tengah samudra luas</p>
+    <h1>
+      <span class="i" data-d="1.4">Ada satu hari</span>
+      <span class="i" data-d="2.7">yang layak dirayakan.</span>
+      <em class="i" data-d="4.2">Selamat berlayar,<br>Pejuang Sukses.</em>
+    </h1>
+    <button id="go" class="i" data-d="5.8"><span>MULAI PELAYARAN</span><b>↓</b></button>
+    <p class="tip i" data-d="6.2">Nyalakan suara untuk pengalaman terbaik 🎧</p>
+  </div>
+</div>
+
+<nav>
+  <span class="logo"><b>✦</b> OCEAN VOYAGE <i>/ 21</i></span>
+  <button id="snd" aria-label="Musik dan suara ombak"><span class="eq"><u></u><u></u><u></u></span><span id="sndT">OFF</span></button>
+</nav>
+<div id="hud" aria-hidden="true"><span>HDG <b id="hdg">000</b>°</span><span><b id="kn">00</b> KN</span></div>
+
+<header class="hero" id="home">
+  <canvas id="c"></canvas>
+  <div class="hero-copy">
+    <p class="eyebrow">5 November · Tengah samudra</p>
+    <h2>Layar terkembang<br><em>di usia ke-21</em></h2>
+    <p class="sub">Ada satu pesan yang ikut berlayar menujumu malam ini.</p>
+  </div>
+  <div id="ship" aria-hidden="true">
+    <div class="wake"></div>
+    <svg viewBox="0 0 820 230">
+      <defs>
+        <linearGradient id="hl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22394a"/><stop offset="1" stop-color="#050d14"/></linearGradient>
+        <linearGradient id="rd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a302b"/><stop offset="1" stop-color="#3a1313"/></linearGradient>
+        <radialGradient id="gl"><stop offset="0" stop-color="#ffd98a" stop-opacity=".9"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <path d="M20 128 L790 128 L760 190 Q752 204 730 204 L120 204 Q70 196 20 128Z" fill="url(#hl)" stroke="#7d98a4" stroke-opacity=".45"/>
+      <path d="M60 176 L752 176 L748 190 Q744 204 724 204 L120 204Q90 200 66 186Z" fill="url(#rd)"/>
+      <path d="M20 128 H790" stroke="#d2bb85" stroke-width="2" opacity=".65"/>
+      <g fill="#ffd98a" opacity=".75"><circle cx="150" cy="150" r="2.5"/><circle cx="190" cy="150" r="2.5"/><circle cx="230" cy="150" r="2.5"/><circle cx="270" cy="150" r="2.5"/><circle cx="310" cy="150" r="2.5"/><circle cx="350" cy="150" r="2.5"/><circle cx="390" cy="150" r="2.5"/><circle cx="430" cy="150" r="2.5"/><circle cx="470" cy="150" r="2.5"/><circle cx="510" cy="150" r="2.5"/></g>
+      <g opacity=".94">
+        <rect x="62" y="96" width="46" height="32" fill="#3b6a7f"/><rect x="108" y="96" width="46" height="32" fill="#7a3d33"/><rect x="154" y="96" width="46" height="32" fill="#aa8a4a"/><rect x="200" y="96" width="46" height="32" fill="#2f5568"/><rect x="246" y="96" width="46" height="32" fill="#6c2f2c"/>
+        <rect x="85" y="64" width="46" height="32" fill="#9a7b42"/><rect x="131" y="64" width="46" height="32" fill="#35607a"/><rect x="177" y="64" width="46" height="32" fill="#7a3d33"/>
+        <rect x="400" y="96" width="46" height="32" fill="#2f5568"/><rect x="446" y="96" width="46" height="32" fill="#aa8a4a"/><rect x="492" y="96" width="46" height="32" fill="#6c2f2c"/><rect x="423" y="64" width="46" height="32" fill="#7a3d33"/><rect x="469" y="64" width="46" height="32" fill="#3b6a7f"/>
+      </g>
+      <path d="M62 112H292M85 80H223M400 112H538M423 80H515" stroke="#050d14" stroke-opacity=".5"/>
+      <path d="M600 128 V52 H706 V128Z" fill="#cfd9de"/><path d="M600 52 H706 V44 H596Z" fill="#8ea0a9"/>
+      <rect x="618" y="22" width="70" height="22" fill="#dbe3e6"/><rect x="624" y="28" width="58" height="8" fill="#ffd98a"/>
+      <rect x="640" y="4" width="26" height="18" fill="#9fb0b8"/><path d="M653 4V-14" stroke="#9fb0b8" stroke-width="3"/>
+      <g fill="#ffd98a"><rect x="608" y="62" width="10" height="8"/><rect x="628" y="62" width="10" height="8"/><rect x="648" y="62" width="10" height="8"/><rect x="668" y="62" width="10" height="8"/><rect x="688" y="62" width="10" height="8"/><rect x="608" y="82" width="10" height="8"/><rect x="648" y="82" width="10" height="8"/><rect x="688" y="82" width="10" height="8"/><rect x="628" y="102" width="10" height="8"/><rect x="668" y="102" width="10" height="8"/></g>
+      <path d="M330 128 V40 M322 40H338 M330 40L300 128M330 40L360 128" stroke="#7d98a4" stroke-width="3" fill="none"/>
+      <path d="M60 128 V110 M60 110 H48" stroke="#7d98a4" stroke-width="2"/>
+      <circle cx="653" cy="-14" r="26" fill="url(#gl)" class="blink"/><circle cx="653" cy="-14" r="4" fill="#ff5d4d"/>
+      <circle cx="48" cy="110" r="4" fill="#58e08e"/><circle cx="330" cy="40" r="3.5" fill="#fff4cc"/>
+      <ellipse cx="650" cy="60" rx="140" ry="50" fill="url(#gl)" opacity=".22"/>
+    </svg>
+  </div>
+  <canvas id="f"></canvas>
+  <div class="mist"></div>
+  <div class="hint"><i></i>GULIR UNTUK BERLAYAR</div>
+</header>
+
+<section class="sec" id="birthday">
+  <div class="kick rv">01 / HARI INI HARIMU</div>
+  <div class="bd">
+    <div class="rv">
+      <p class="eyebrow">Babak baru dimulai</p>
+      <h2>Selamat<br><em>Ulang Tahun</em></h2>
+      <div class="line"></div>
+      <h3>Muhammad Andika Pratama</h3>
+      <p class="mute">Tepat 21 tahun, dan layarmu masih terus terkembang. Semoga angin selalu berpihak padamu.</p>
+    </div>
+    <div class="num rv">
+      <svg class="rose" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="none" stroke="#dcbf82" stroke-opacity=".3"/><circle cx="100" cy="100" r="82" fill="none" stroke="#dcbf82" stroke-opacity=".2" stroke-dasharray="2 6"/><path d="M100 4V28M100 172V196M4 100H28M172 100H196" stroke="#dcbf82" stroke-width="2"/><path d="M100 14L108 100L100 186L92 100Z" fill="#dcbf82" fill-opacity=".1"/><path d="M14 100L100 92L186 100L100 108Z" fill="#dcbf82" fill-opacity=".1"/></svg>
+      <span id="n21">21</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="letter">
+  <div class="kick rv">02 / CATATAN DARI KEJAUHAN</div>
+  <article class="log rv">
+    <div class="top"><span>PESAN UNTUKMU</span><span>No. 021</span></div>
+    <p class="rv">Selamat ulang tahun Muhammad Andika Pratama yang ke-21 tahun ya 🎉. Semoga di usiamu saat ini, kamu selalu diberikan kesehatan, kelancaran, dan segala hal baik yang ada dalam dirimu terus bertumbuh serta berkembang selalu.</p>
+    <p class="rv">Dari jauh, aku selalu mendoakan yang terbaik untukmu. Aku sangat bahagia kamu mau mengubah hidupmu jadi lebih baik lagi, apresiasi besar untukmu bisa melangkah lebih maju. Semoga makin rajin ibadahnya, makin tenang hatinya lewat sholat dan zikir, selalu dijaga kesehatannya, serta terus dikelilingi kebaikan di mana pun kamu berada. Ikut senang mendengar kabar kalau kamu sudah bisa bangkit dan melangkah dengan lebih baik. Semoga usahamu saat ini dimudahkan, dilancarkan, diberi hal-hal yang lebih baik, dan sukses selalu anak pertama ya, Mas dhika 🥳.</p>
+    <p class="rv">Doa tulusku juga tercurah untuk kakek, nenek, orang tua, serta adik perempuanmu agar selalu sehat, bahagia, dan dilindungi oleh-Nya.</p>
+    <p class="rv">Aku hanya ingin menuntaskan hal kecil yang tertunda dari tahun 2024 lalu. Dulu aku berniat mengucapkan langsung, tapi karena menjaga batasan sebab kamu sudah punya pasangan, aku memilih memberitahu tanggal ulang tahunmu ke cewekmu saat itu.</p>
+    <p class="rv">Melihat kamu dirayakan dengan baik adalah hal yang menyenangkan. Semoga hidupmu selalu aman, damai, dan penuh keberkahan. Melangkahlah maju dan lebih bersinar.</p>
+    <p class="rv">Dari intinya manusia yang hidup dan selalu berdoa dari jauh untukmu berharap ke Tuhan kamu bisa jadi lebih baik, aamiin. Aku minta maaf juga jika aku banyak salah ke kamu, maaf jika di ulang tahunmu aku tidak bisa memberi bingkisan atau kue ultah, tapi doaku untuk kamu makin maju dan sukses itu selalu ada. Terima kasih, orang baik. Sejak 2020 aku selalu mendoakanmu dengan tulus, dan aku berharap doa itu akan tetap lanjut sampai aku melihatmu menjadi pria yang jauh lebih baik dan sukses dunia akhirat ya, Mas Dika.</p>
+    <p class="end rv">Semangat selalu, pejuang sukses 💗.</p>
+  </article>
+</section>
+
+<section class="sec lh" id="light">
+  <div class="kick rv">03 / MERCUSUAR DOA</div>
+  <div class="lighthouse rv" aria-hidden="true">
+    <div class="beam"></div>
+    <svg viewBox="0 0 120 220"><path d="M44 210 L52 70 H68 L76 210Z" fill="#dfe6e9"/><path d="M46 170 L48.5 130 H71.5 L74 170Z M50 110 L51.5 80 H68.5 L70 110Z" fill="#a8362f"/><rect x="48" y="52" width="24" height="20" fill="#0a1b28" stroke="#dcbf82"/><rect x="52" y="56" width="16" height="12" fill="#ffe3a0"/><path d="M42 52 H78 L60 34Z" fill="#a8362f"/><rect x="36" y="70" width="48" height="5" fill="#8ea0a9"/><rect x="20" y="208" width="80" height="12" fill="#0a1b28"/></svg>
+  </div>
+  <div class="rv">
+    <p class="eyebrow">Meski dari kejauhan</p>
+    <h2>Semoga lautnya tenang,<br><em>dan jalanmu terang.</em></h2>
+    <p class="mute">Semoga setiap langkah diberi arah, setiap perjalanan diberi keselamatan, dan setiap usaha membawa keberhasilan.</p>
+  </div>
+</section>
+
+<section class="fin" id="final">
+  <div class="sun"></div>
+  <div class="sec">
+    <div class="kick rv">04 / DI BALIK CAKRAWALA</div>
+    <div class="rv">
+      <p class="eyebrow">Perjalananmu baru dimulai</p>
+      <h2>Terus Berlayar.<br><em>Terus Bersinar.</em></h2>
+      <p class="mute">Fajar menunggu di ujung lautan. Teruslah melangkah.</p>
+      <button id="cel" class="cel">RAYAKAN ✦</button>
+    </div>
+  </div>
+  <div class="sea"></div>
+</section>
+<footer>THE OCEAN VOYAGE · 21 · DENGAN DOA DARI JAUH</footer>
+<canvas id="fx"></canvas>
+<audio id="bgm" src="audio/song.mp3" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>
